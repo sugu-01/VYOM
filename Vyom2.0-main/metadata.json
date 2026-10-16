@@ -1,0 +1,6 @@
+{
+  "name": "VYOM — Catastrophe Risk Intelligence Platform",
+  "description": "Premium Tamil Nadu catastrophe risk intelligence platform featuring geospatial hazard intelligence, auditable loss anatomy, scenario simulation, custom vector LLM risk copilot, and Supabase integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

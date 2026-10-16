@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080a0d;
+    color: #f1f5f9;
+  }
+}
+
+/* Custom scrollbars for data tables and panels */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232b38;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4759;
+}
+
+/* Tabular figures for all numeric outputs */
+.tabular-numbers {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Luxury hairline borders and gold accents */
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.border-gold-focus:focus-visible {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 1px #d4af37;
+}
+
+/* Champagne gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5e6a3 0%, #d4af37 50%, #aa8528 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-accent {
+  background-color: #d4af37;
+}
+
+.text-gold-accent {
+  color: #dfba4f;
+}
+
+/* Windy map container fills parent */
+#windy {
+  width: 100%;
+  height: 100%;
+  background: #07090c;
+}
+
+/* Leaflet tooltip dark theme for Vyom zone overlays */
+.vyom-zone-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.vyom-zone-tooltip::before {
+  display: none !important;
+}
+
+/* Hide default Leaflet attribution — we show our own in the legend bar */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* Ensure Windy controls don't clash with our toolbar z-index */
+#windy .leaflet-top {
+  z-index: 999 !important;
+}
